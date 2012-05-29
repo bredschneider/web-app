@@ -20,13 +20,13 @@ SignaSecure is a signature repository for working professionals that allows docu
 - 
 
 ##Clientele 
-1. *Leslie Brafield* - mother and real estate mogule. 
-###Favourite past-times: exercising and spending time with family.
+1. **Leslie Brafield** - mother and real estate mogule. 
+**Favourite past-times:** exercising and spending time with family.
 Leslie is a high-profile real estate agent in the Greater Toronto Area. 
-###Motivations: spending more time at home, and less time worrying about getting documentation signed and into the office in a timely fashion (currently using a fax machine to achieve this purpose). 
-###Demotivations: not tech-savvy (just got her first Blackberry a year ago, when her Nokia circa 1998 finally gave out).
+**Motivations:** spending more time at home, and less time worrying about getting documentation signed and into the office in a timely fashion (currently using a fax machine to achieve this purpose). 
+**Demotivations:** not tech-savvy (just got her first Blackberry a year ago, when her Nokia circa 1998 finally gave out).
 
-2. *Benjamin Somers* - 24 year old, legal intern in Montreal Quebec. 
-###Favourite past-times: waterpolo and having beers with friends.
-###Motivations: as an intern, Ben has the responsibility of dealing with legal paperwork. He is bothered by the lengthy wait times for sign-offs on paperwork.
-###Demotivations: teaching "old-school" lawyers how to use new technologies.
+2. **Benjamin Somers** - 24 year old, legal intern in Montreal Quebec. 
+**Favourite past-times:** waterpolo and having beers with friends.
+**Motivations:** as an intern, Ben has the responsibility of dealing with legal paperwork. He is bothered by the lengthy wait times for sign-offs on paperwork.
+**Demotivations:** teaching "old-school" lawyers how to use new technologies.
