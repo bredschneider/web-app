@@ -2,7 +2,6 @@
 SignaSecure is a signature repository for working professionals that allows documents to be signed off in a secure and timely fashion.  
 With this app, gone are the days where work would slow down to a stand still, while individuals waited for documents to be approved. 
 With SignaSecure, documents can be signed off immediately via the web or a mobile device.
-//Research similar applications and applications that can be used (Adobe(http://www.adobe.com/security/digsig.html), xyzmo(http://www.xyzmo.com/en/products/Pages/digital-signature-ipad-android.aspx), DocuSign(http://www.docusign.com/products/features/anywhere-access), Pogo Stylus (http://www.gizmag.com/iphone-signature-app-electronic-documents/14004/)
 
 ##Features 
 - A one-time signature is captured using *(TBD software)* and stored in an organization specific repository for future use;
@@ -19,13 +18,14 @@ With SignaSecure, documents can be signed off immediately via the web or a mobil
 - Use and understand public key infrastructure (PKI);
 - Use and understand plug-ins to create the digital version of signatures (specifically Thomas J Bradley Signature Pad);
 - Use and understand databases (specifically MySQL) to save, store and later retrieve the digital signature;
-- Use and understand password applications *(specifically TBD)* to retrieve said signatures, ensuring signature security; 
+- Use and understand password security and protection methods to eliminate signature forgery and retrieve said signatures;
 
 ##Similar Applications
-- *Adobe Digital Signatures* 
-- *Signature Capture for iPad*
-- *DocuSign*
-- *Autograph (for iPhone)*
+- *Adobe Digital Signatures* (http://www.adobe.com/security/digsig.html)
+
+- *Signature Capture for iPad* (http://www.xyzmo.com/en/products/Pages/digital-signature-ipad-android.aspx)
+
+- *DocuSign* (http://www.docusign.com/products/features/anywhere-access)
 
 ##Differences
 - 
