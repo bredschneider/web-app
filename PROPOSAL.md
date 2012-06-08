@@ -1,12 +1,12 @@
 #SignaSecure
 SignaSecure is a signature repository for working professionals that allows documents to be signed off in a secure and timely fashion.  
-With this app, gone are the days where work would slow down to a stand still, while individuals waited for documents to be approved. 
-With SignaSecure, documents can be signed off immediately via the web or a mobile device.
+With this app, gone are the days where work would slow down to a stand still, while individuals wait for documents to be approved. 
+With SignaSecure, documents can be signed off immediately via the web.
 
 ##Features 
 - A one-time signature is captured using **Thomas J Bradley Signature Pad** *(http://thomasjbradley.ca/lab/)* and stored in a repository for future use;
-- Each signature is password protected to avoid forging of signatures on legal documents;
-- The signature can be added to a document using a password;
+- Each signature is password protected (with multiple levels of security) to avoid the ease of accessing and forging signatures on legal documents;
+- The signature can be added to a document using the password;
 
 ##Learning Goals
 - To learn how to effectively develop a web application with a mobile friendly layout;
@@ -35,14 +35,14 @@ With SignaSecure, documents can be signed off immediately via the web or a mobil
 	- No need to transfer the signature to a PDF document, done automatically.
 	
 	**Differences**
-	My app will store signatures specific to a certain organization or group to avoid encountering issues with individuals trying to steal other signatures as well as separating signatures for those individuals who share similair names (i.e. John Smith).
+	My app will store signatures specific to a certain organization or group to avoid encountering issues with individuals trying to steal other signatures.  This will also prevent shared signatures for those individuals who share the same names (i.e. John Smith) but are from different organizations.
 	
 - **DocuSign** *(http://www.docusign.com/products/features/anywhere-access)*
 	- Works from any device (desktop, tablet and mobile);
-	- Ability to send, sign and manage documents in the cloud while on your mobile device;
+	- Ability to send, sign and manage documents in the cloud while on your mobile device.
 	
 	**Differences**
-	My app will use a password as well as password protected questions, to ensure added protection to an individual’s signature.
+	My app will use a multiple level password system, to ensure added protection to an individual’s signature.
 	
 ##User Research
 This application will be used in a professional setting.
@@ -60,9 +60,9 @@ This application will be used in a professional setting.
 	
 ##Auditor
 **GRAMMAR Auditor**
-*Relevant Work Experience:*
+-*Relevant Work Experience:*
 	- Associate Editor – Internal Communications: Government Department
 		- Edited submissions for grammar and content.
-*General Interest*
+-*General Interest*
 	- If I get stupidly bored during class (not your classes Thomas) I fix the bad grammar and spelling errors of some of the other professors.
 	- I proofread a lot of papers on a vairety of subjects, from Master’s thesis proposals to short stories for friends and family.
