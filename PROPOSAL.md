@@ -6,7 +6,7 @@ With SignaSecure, documents can be signed off immediately via the web or a mobil
 ##Features 
 - A one-time signature is captured using *Thomas J Bradley Signature Pad* *(http://thomasjbradley.ca/lab/)* and stored in a repository for future use;
 - Each signature is password protected to avoid forging of signatures on legal documents;
-- The signature can be added to a web document using a password;
+- The signature can be added to a document using a password;
 
 ##Learning Goals
 - To learn how to effectively develop a web application with a mobile friendly layout;
@@ -18,18 +18,24 @@ With SignaSecure, documents can be signed off immediately via the web or a mobil
 - Use and understand public key infrastructure (PKI);
 - Use and understand plug-ins to create the digital version of signatures (specifically Thomas J Bradley Signature Pad);
 - Use and understand databases (specifically MySQL) to save, store and later retrieve the digital signature;
-- Use and understand password security and protection methods to eliminate signature forgery and retrieve said signatures;
+- Use and understand password security and protection methods (to be discussed in a few weeks in class :)) to eliminate signature forgery and retrieve said signatures;
 
 ##Similar Applications
 - **Adobe Digital Signatures** *(http://www.adobe.com/security/digsig.html)*
-	-  Add a digital signature to a PDF
-	-
+	- Add a digital signature to a PDF;
+	- Create a digital signature using a variety of applications: pen, finger, type-font etc.
 - **Signature Capture for iPad** *(http://www.xyzmo.com/en/products/Pages/digital-signature-ipad-android.aspx)*
-
+	- Adds a digital signature to a PDF;
+	- Real-time signature verification (if the signature matches the one stored a true value is returned, else it returns false);
+	- No need to transfer the signature to a PDF document, done automatically.
 - **DocuSign** *(http://www.docusign.com/products/features/anywhere-access)*
-
+	- Works from any device (desktop, tablet and mobile);
+	- Ability to send, sign and manage documents in the cloud while on your mobile device;
+	
 ##Differences
-- 
+- To ensure extra protection, each signature in SignaSecure will be password protected;
+- Each signature stored in SignaSecure will be specific to a certain organization or group to avoid encountering issues with individuals trying to steal other signatures as well as separating signatures for those individuals who share similair names (i.e. John Smith);
+- Available to use on PDF documents, Word and scanned documents. 
 
 ##Clientele 
 1. **Leslie Brafield** - mother and real estate mogule. 
