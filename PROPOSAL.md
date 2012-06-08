@@ -60,9 +60,9 @@ This application will be used in a professional setting.
 	
 ##Auditor
 **GRAMMAR Auditor**
--*Relevant Work Experience:*
+- *Relevant Work Experience:*
 	- Associate Editor – Internal Communications: Government Department
 		- Edited submissions for grammar and content.
--*General Interest*
+- *General Interest*
 	- If I get stupidly bored during class (not your classes Thomas) I fix the bad grammar and spelling errors of some of the other professors.
 	- I proofread a lot of papers on a vairety of subjects, from Master’s thesis proposals to short stories for friends and family.
