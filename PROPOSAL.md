@@ -4,9 +4,9 @@ With this app, gone are the days where work would slow down to a stand still, wh
 With SignaSecure, documents can be signed off immediately via the web or a mobile device.
 
 ##Features 
-- A one-time signature is captured using *(TBD software)* and stored in an organization specific repository for future use;
+- A one-time signature is captured using *Thomas J Bradley Signature Pad* *(http://thomasjbradley.ca/lab/)* and stored in a repository for future use;
 - Each signature is password protected to avoid forging of signatures on legal documents;
-- The signature can be added to *(this document format)* using an easy *(password-protected software)*
+- The signature can be added to a web document using a password;
 
 ##Learning Goals
 - To learn how to effectively develop a web application with a mobile friendly layout;
@@ -21,24 +21,25 @@ With SignaSecure, documents can be signed off immediately via the web or a mobil
 - Use and understand password security and protection methods to eliminate signature forgery and retrieve said signatures;
 
 ##Similar Applications
-- *Adobe Digital Signatures* (http://www.adobe.com/security/digsig.html)
+- **Adobe Digital Signatures** *(http://www.adobe.com/security/digsig.html)*
+	-  Add a digital signature to a PDF
+	-
+- **Signature Capture for iPad** *(http://www.xyzmo.com/en/products/Pages/digital-signature-ipad-android.aspx)*
 
-- *Signature Capture for iPad* (http://www.xyzmo.com/en/products/Pages/digital-signature-ipad-android.aspx)
-
-- *DocuSign* (http://www.docusign.com/products/features/anywhere-access)
+- **DocuSign** *(http://www.docusign.com/products/features/anywhere-access)*
 
 ##Differences
 - 
 
 ##Clientele 
 1. **Leslie Brafield** - mother and real estate mogule. 
-**Favourite past-times:** exercising and spending time with family.
-Leslie is a high-profile real estate agent in the Greater Toronto Area. 
-**Motivations:** spending more time at home, and less time worrying about getting documentation signed and into the office in a timely fashion (currently using a fax machine to achieve this purpose). 
-**Demotivations:** not tech-savvy (just got her first Blackberry a year ago, when her Nokia circa 1998 finally gave out).
+- Leslie is a high-profile real estate agent in the Greater Toronto Area. While the real estate market continues to change and fluctuate to accomodate a changing demographic in home-buyers, the technology used to manage these has remained relatively stagnant.
+- **Favourite past-times:** exercising and spending time with family.
+- **Motivations:** spending more time at home, and less time worrying about getting documentation signed and into the office in a timely fashion (currently using a fax machine to achieve this purpose, which means that when the office closes, staff are not around to recieve the documentation). 
+- **Demotivations:** not tech-savvy (just got her first Blackberry a year ago, when her Nokia circa 1998 finally gave out).
 
 2. **Benjamin Somers** - 24 year old, legal intern in Montreal Quebec. 
-**Favourite past-times:** waterpolo and having beers with friends.
-Benjamin is an intern at a legal firm in Montreal Quebec.
-**Motivations:** as an intern, Ben has the responsibility of dealing with legal paperwork. He is bothered by the lengthy wait times for sign-offs on paperwork.
-**Demotivations:** teaching "old-school" lawyers how to use new technologies.
+- Benjamin is an intern at a legal firm in Montreal Quebec. He is a fairly tech savvy individual who enjoys using technology to make his life easier.
+- **Favourite past-times:** waterpolo and having beers with friends.
+- **Motivations:** as a legal intern, Ben has the responsibility of dealing with a lot of legal paperwork. He is bothered by the lengthy wait times for sign-offs on the paperwork as well as the poor-turnaround times.
+- **Demotivations:** as an intern who is fairly tech-savvy picking up the technology shouldn't be a problem however, teaching "old-school" lawyers how to use new technology could present as a demotivating factor.
