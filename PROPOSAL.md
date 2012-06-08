@@ -1,5 +1,7 @@
 #SignaSecure
-SignaSecure is a signature repository for working professionals that allows documents to be signed off in a secure and timely fashion.  With this app, gone are the days where work would slow down to a stand still, while individuals waited for documents to be approved. With SignaSecure, documents can be signed off immediately via the web or a mobile device.
+SignaSecure is a signature repository for working professionals that allows documents to be signed off in a secure and timely fashion.  
+With this app, gone are the days where work would slow down to a stand still, while individuals waited for documents to be approved. 
+With SignaSecure, documents can be signed off immediately via the web or a mobile device.
 //Research similar applications and applications that can be used (Adobe(http://www.adobe.com/security/digsig.html), xyzmo(http://www.xyzmo.com/en/products/Pages/digital-signature-ipad-android.aspx), DocuSign(http://www.docusign.com/products/features/anywhere-access), Pogo Stylus (http://www.gizmag.com/iphone-signature-app-electronic-documents/14004/)
 
 ##Features 
@@ -8,13 +10,22 @@ SignaSecure is a signature repository for working professionals that allows docu
 - The signature can be added to *(this document format)* using an easy *(password-protected software)*
 
 ##Learning Goals
-- To learn how to effectively develop a web application with a mobile friendly layout
+- To learn how to effectively develop a web application with a mobile friendly layout;
+- To explore how to integrate softwares to develop applications;
+- To learn more about security and password protection for the web;
 
 ##Technologies and Techniques 
 - Mobile first and responsive web design;
+- Use and understand public key infrastructure (PKI);
+- Use and understand plug-ins to create the digital version of signatures (specifically Thomas J Bradley Signature Pad);
+- Use and understand databases (specifically MySQL) to save, store and later retrieve the digital signature;
+- Use and understand password applications *(specifically TBD)* to retrieve said signatures, ensuring signature security; 
 
 ##Similar Applications
-- 
+- *Adobe Digital Signatures* 
+- *Signature Capture for iPad*
+- *DocuSign*
+- *Autograph (for iPhone)*
 
 ##Differences
 - 
@@ -28,5 +39,6 @@ Leslie is a high-profile real estate agent in the Greater Toronto Area.
 
 2. **Benjamin Somers** - 24 year old, legal intern in Montreal Quebec. 
 **Favourite past-times:** waterpolo and having beers with friends.
+Benjamin is an intern at a legal firm in Montreal Quebec.
 **Motivations:** as an intern, Ben has the responsibility of dealing with legal paperwork. He is bothered by the lengthy wait times for sign-offs on paperwork.
 **Demotivations:** teaching "old-school" lawyers how to use new technologies.
