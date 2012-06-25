@@ -30,8 +30,7 @@ All workouts and updates are documented and recorded in the users profile to hel
 	- Price $9.99 (renewed yearly).
 	
 	**Differences**
-	My app will be able to customize workouts for both the gym and the home environment. 
-	It will also create workouts based on the available time a user has to work out in.
+	My app will be able to create workouts based on the available time a user has to work out in.
 	
 - **iFitness** *(http://itunes.apple.com/ca/app/ifitness-pro/id536049508?mt=8&ign-mpt=uo%3D2)*
 	- Sorts exercises by body regions;
@@ -40,7 +39,7 @@ All workouts and updates are documented and recorded in the users profile to hel
 	- Price $1.99.
 	
 	**Differences**
-	My app will store information about the user including their goals, weight and BMI to help them achieve success.
+	My app will store workouts for each user.
 	
 - **Physique** *(http://physiqueapp.com/)*
 	- Tracks weight-lifting workout;
