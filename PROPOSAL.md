@@ -1,9 +1,7 @@
 #Sweaty Betty
 Sweaty Betty is a fitness application designed to help the user create, track and change up their workouts to meet their fitness goals.
-The premise of the application is simple, users create a profile tracking their progress as well as their fitness goals and the application develops a workout to match the needs of the user.
-This application creates workouts for both the gym environment as well as the home environment, taking into consideration the limitations to an abundance of workout materials.
-It also takes into consideration the length of time a user has to work out to help meet the user's fitness goals. 
-All workouts and updates are documented and recorded in the users profile to help the user track their progress.  
+The premise of the application is simple, the application develops a workout to match the needs of the user and time constraints of the user.
+All workouts are documented and recorded in the users profile to help the user track their progress.  
 
 ##Features 
 - A profile page that can be continually updated to help track the progress of the user;
