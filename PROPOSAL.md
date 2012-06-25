@@ -1,62 +1,69 @@
-#SignaSecure
-SignaSecure is a signature repository for working professionals that allows documents to be signed off in a secure and timely fashion.  
-With this app, gone are the days where work would slow down to a stand still, while individuals wait for documents to be approved. 
-With SignaSecure, documents can be signed off immediately via the web.
+#Sweaty Betty
+Sweaty Betty is a fitness application designed to help the user create, track and change up their workouts to meet their fitness goals.
+The premise of the application is simple, users create a profile tracking their progress as well as their fitness goals and the application develops a workout to match the needs of the user.
+This application creates workouts for both the gym environment as well as the home environment, taking into consideration the limitations to an abundance of workout materials.
+It also takes into consideration the length of time a user has to work out to help meet the user's fitness goals. 
+All workouts and updates are documented and recorded in the users profile to help the user track their progress.  
 
 ##Features 
-- A one-time signature is captured using **Thomas J Bradley Signature Pad** *(http://thomasjbradley.ca/lab/)* and stored in a repository for future use;
-- Each signature is password protected (with multiple levels of security) to avoid the ease of accessing and forging signatures on legal documents;
-- The signature can be added to a document using the password;
+- A profile page that can be continually updated to help track the progress of the user;
+- A repository of workouts;
+- A custom created workout to match the workout environment as well as the time constraints of the user;
 
 ##Learning Goals
 - To learn how to effectively develop a web application with a mobile friendly layout;
-- To explore how to work with and integrate software to develop applications;
+- To explore how to work with databases and repositories to store workouts and user information;
 - To learn more about security and password protection for the web;
+- To learn more about retrieving information from databases as well as how to archive material;
 
 ##Technologies and Techniques 
 - Mobile first and responsive web design;
 - Use and understand public key infrastructure (PKI);
-- Use and understand plug-ins to create the digital version of signatures (specifically Thomas J Bradley Signature Pad);
 - Use and understand databases (specifically MySQL) to save, store and later retrieve the digital signature;
-- Use and understand password security and protection methods (to be discussed in a few weeks in class :)) to eliminate signature forgery and retrieve said signatures;
+- Use and understand password security and protection methods (to be discussed in a few weeks in class :)) to retrieve user information;
 
 ##Similar Applications
-- **Adobe Digital Signatures** *(http://www.adobe.com/security/digsig.html)*
-	- Add a digital signature to a PDF;
-	- Create a digital signature using a variety of applications: pen, finger, type-font etc.;
-	- Supports English, French, German, and Japanese languages.
+- **Fitness Builder** *(http://itunes.apple.com/ca/app/fitnessbuilder/id306287984?mt=8)*
+	- Portable personal trainer, with the option to drag and drop exercises into workout plans;
+	- Video and audio streaming of exercises and work-out videos;
+	- Body stats, weight tracker, BMI/BMR;
+	- Price $9.99 (renewed yearly).
 	
 	**Differences**
-	My app will be able to be used on a variety of document formats including: PDF, Word and image scans,(not only limited to PDF).
+	My app will be able to customize workouts for both the gym and the home environment. 
+	It will also create workouts based on the available time a user has to work out in.
 	
-- **Signature Capture for iPad** *(http://www.xyzmo.com/en/products/Pages/digital-signature-ipad-android.aspx)*
-	- Adds a digital signature to a PDF;
-	- Real-time signature verification (if the signature matches the one stored a true value is returned, else it returns false);
-	- No need to transfer the signature to a PDF document, done automatically.
-	
-	**Differences**
-	My app will store signatures specific to a certain organization or group to avoid encountering issues with individuals trying to steal other signatures.  This will also prevent shared signatures for those individuals who share the same names (i.e. John Smith) but are from different organizations.
-	
-- **DocuSign** *(http://www.docusign.com/products/features/anywhere-access)*
-	- Works from any device (desktop, tablet and mobile);
-	- Ability to send, sign and manage documents in the cloud while on your mobile device.
+- **iFitness** *(http://itunes.apple.com/ca/app/ifitness-pro/id536049508?mt=8&ign-mpt=uo%3D2)*
+	- Sorts exercises by body regions;
+	- 20 pre-defined routines;
+	- Exercise routines with limited to no equipment.
+	- Price $1.99.
 	
 	**Differences**
-	My app will use a multiple level password system, to ensure added protection to an individual’s signature.
+	My app will store information about the user including their goals, weight and BMI to help them achieve success.
+	
+- **Physique** *(http://physiqueapp.com/)*
+	- Tracks weight-lifting workout;
+	- Option to enable an Auto Weight-Progression, which automatically increases your target lifting weight when you are ready;
+	- Tracks the user's progress.
+	- Designed to be used at a gym (on a mobile device).
+	
+	**Differences**
+	My app will use mobile first and responsive design technology but will also available to use on computers and tablets.
 	
 ##User Research
-This application will be used in a professional setting.
-1. **Leslie Brafield** - mother and real estate mogul. 
-	- Leslie is a high-profile real estate agent in the Greater Toronto Area. While the real estate market continues to change and fluctuate to accommodate a changing demographic in home-buyers, the technology used to manage these has remained relatively stagnant.
-	- **Favourite past-times:** exercising and spending time with family.
-	- **Motivations:** spending more time at home, and less time worrying about getting documentation signed and into the office in a timely fashion (currently using a fax machine to achieve this purpose, which means that when the office closes, staff are not around to recieve the documentation). 
-	- **Demotivations:** not tech-savvy (just got her first Blackberry a year ago, when her Nokia circa 1998 finally gave out).
+1. **Jessica Bredschneider (myself)** - former competitive swimmer, provincial-team water polo player and reformed cardio queen. 
+	- I have always had a great love for fitness. As a former competitive swimmer I am used to using cross-training to get the best results out of my sport.
+	- **Favourite past-times:** exercising, playing sports and being outdoors.
+	- **Motivations:** I enjoy working out and make it a priority to get some form of exercise in everyday. It helps me focus more and fidget less. 
+	- **Demotivations:** not a lot of time, need an option for both home workouts as well as the gym.
 
-2. **Benjamin Somers** - 24 years old, legal intern in Montreal Quebec. 
-	- Benjamin is an intern at a legal firm in Montreal Quebec. He is a fairly tech savvy individual who enjoys using technology to make his life easier.
-	- **Favourite past-times:** waterpolo and having beers with friends.
-	- **Motivations:** as a legal intern, Ben has the responsibility of dealing with a lot of legal paperwork. He is bothered by the lengthy wait times for sign-offs on the paperwork as well as the poor-turnaround times.
-	- **Demotivations:** as an intern who is fairly tech-savvy picking up the technology shouldn't be a problem however, teaching "old-school" lawyers how to use new technology could present as a demotivating factor.
+2. **Cardio Queens** - female and or male, 16-30 years old, committed to doing cardio for 75% or 1 hour or more during a workout session. 
+	- Cardio queens are generally females who base the majority of their workout timeframe doing extensive amounts of cardio (i.e. running on a treadmill, elliptical trainer etc.).
+	- While cardio is good, it is not the be-all end-all of a workout and generally uninformed cardio queens don't see the value in weight training or doing another cross-training activity to meet their fitness goals.
+	- **Favourite past-times:** cardio.
+	- **Motivations:** toning up and lose weight.
+	- **Demotivations:** afraid to use the weight room.
 	
 ##Auditor
 **GRAMMAR Auditor**
@@ -64,5 +71,5 @@ This application will be used in a professional setting.
 	- Associate Editor – Internal Communications: Government Department
 		- Edited submissions for grammar and content.
 - *General Interest*
-	- If I get stupidly bored during class (not your classes Thomas) I fix the bad grammar and spelling errors of some of the other professors.
-	- I proofread a lot of papers on a vairety of subjects, from Master’s thesis proposals to short stories for friends and family.
+	- I enjoy fixing bad grammar and spelling errors.
+	- I proofread a lot of papers on a variety of subjects, from Master’s thesis proposals to short stories for friends and family.¬¬
