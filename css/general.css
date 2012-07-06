@@ -105,6 +105,10 @@ footer {
 	text-decoration:underline;
 }
 
+#secondary-nav .current {
+	text-decoration: underline;
+}
+
 @media all and (min-width: 90px) {
 
 #login {
@@ -171,6 +175,10 @@ button {
 
 .glossary h2 {
 	text-transform:uppercase;
+}
+
+#about-me {
+	padding: 1em;
 }
 
 }
