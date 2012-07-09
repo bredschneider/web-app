@@ -1,42 +1,4 @@
-<?php
-	require_once 'includes/db.php';
-	
-	$errors = array();
-	$workout = filter_input(INPUT_POST, 'workout', FILTER_SANITIZE_STRING);
-	$muscle = filter_input(INPUT_POST, 'muscle', FILTER_SANITIZE_STRING);
-
-	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	
-	if ($workout !='3' || $workout !='6' || $workout !='9' || $workout !='12') {
-		$errors['workout'] = true;
-	}
-	
-	if ($muscle !='1' || $muscle !='2' || $muscle !='3' || $muscle !='4' || $muscle != '5') {
-		$errors['muscle'] = true;
-	}
-	
-	if (empty($errors)) {
-		$sql = $db->prepare('
-		SELECT id, exercise, category
-		FROM workout
-		WHERE :category = category
-		LIMIT :amount
-		');
-		$sql->bindValue(':category', $category, PDO::PARAM_INT);
-		$sql->bindValue(':amount', $workout, PDO::PARAM_STR);
-		$sql->execute();
-		//var_dump($sql->errorInfo());
-		header('location:results.php');
-		$results= $sql->fetchALL();
-
-		exit;
-	}
-	
-}
-
-
-	
-?><!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 	<head>
 		<meta charset="utf-8">

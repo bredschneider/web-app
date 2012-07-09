@@ -1,7 +1,40 @@
-<?php 
+<?php
+	require_once 'includes/db.php';
+	
+	$results = array();
+	$errors = array();
+	$workout = filter_input(INPUT_POST, 'workout', FILTER_SANITIZE_STRING);
+	$muscle = filter_input(INPUT_POST, 'muscle', FILTER_SANITIZE_STRING);
 
-require_once 'includes/db.php';
+	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+	
+	if (!in_array($workout, array(3,6,9,12))) {
+		$errors['workout'] = true;
+	}
+	
+	if (!in_array($muscle, array(1,2,3,4,5))) {
+		$errors['muscle'] = true;
+	}
 
+	if (empty($errors)) {
+		$sql = $db->prepare('
+		SELECT id, exercise, category
+		FROM workout
+		WHERE category = :category
+		LIMIT :amount
+		');
+		$sql->bindValue(':category', $muscle, PDO::PARAM_INT);
+		$sql->bindValue(':amount', (int) $workout, PDO::PARAM_INT);
+		$sql->execute();
+
+		$results= $sql->fetch();
+
+	}
+	
+}
+
+
+	
 ?>
 
 <!DOCTYPE HTML>
@@ -26,12 +59,21 @@ require_once 'includes/db.php';
 	</header>
 		
 		<div id="results">
+
         	<table>
             	<tr>
-                	<td></td>
+                	<td>Exercise</td>
+                    <td>15 reps</td>
+                    <td>15 reps</td>
+                    <td>15 reps</td>
                 </tr>
+            	<?php foreach ($results as $workout):?>
+                <tr>
+                	<td><?php echo $results['exercise']; ?></td>
+                </tr>
+                <?php endforeach; ?>
             </table>
-        
+    
         </div>
 		
 		<footer>
