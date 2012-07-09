@@ -1,8 +1,24 @@
 <?php
 	require_once 'includes/db.php';
 	
+	$errors = array();
+	
 	$_SESSION['referrer'] = $_SERVER['REQUEST_URI'];
-
+	
+	$workout = filter_input(INPUT_POST, 'workout', FILTER_SANITIZE_STR);
+	$muscle = filter_input(INPUT_POST, 'muslce', FILTER_SANITIZE_STR);
+	
+	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+		
+		if ($workout !='15' || $workout !='30' || $workout !='45' || $workout != '60') {
+			$errors['workout'] = true;
+		}
+		
+		if ($msucle !='arms' || $muscle !='back' || $muscle !='chest' || $muscle != 'core' || $muscle != 'legs') {
+			$errors['workout'] = true;
+		}
+		
+	}
 
 ?><!DOCTYPE HTML>
 <html>
@@ -25,7 +41,7 @@
 		</nav>
 	</header>
 		
-		<form id="home">
+		<form method="psot" action="homepage.php" id="home">
 			<fieldset id="time">
 				<legend>How long do you have to workout?</legend>
 				<input type="radio" id="15" name="workout" value="0">
@@ -59,7 +75,7 @@
 			<p>Before undertaking any exercise program, be sure to consult your physician.</p>
 			<nav id="secondary-nav">
 				<ul>
-					<li><a href="homepage.html">Home</a></li>
+					<li><a href="homepage.php">Home</a></li>
 					<li><a href="about-us.html">About Us</a></li>
 					<li><a href="contact-us.html">Contact</a></li>
 				</ul>
