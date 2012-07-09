@@ -1,3 +1,9 @@
+<?php 
+
+require_once 'includes/db.php';
+
+?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -20,6 +26,11 @@
 	</header>
 		
 		<div id="results">
+        	<table>
+            	<tr>
+                	<td></td>
+                </tr>
+            </table>
         
         </div>
 		

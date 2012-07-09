@@ -2,24 +2,40 @@
 	require_once 'includes/db.php';
 	
 	$errors = array();
-	
-	$_SESSION['referrer'] = $_SERVER['REQUEST_URI'];
-	
-	$workout = filter_input(INPUT_POST, 'workout', FILTER_SANITIZE_STR);
-	$muscle = filter_input(INPUT_POST, 'muslce', FILTER_SANITIZE_STR);
-	
-	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-		
-		if ($workout !='15' || $workout !='30' || $workout !='45' || $workout != '60') {
-			$errors['workout'] = true;
-		}
-		
-		if ($msucle !='arms' || $muscle !='back' || $muscle !='chest' || $muscle != 'core' || $muscle != 'legs') {
-			$errors['workout'] = true;
-		}
-		
-	}
+	$workout = filter_input(INPUT_POST, 'workout', FILTER_SANITIZE_STRING);
+	$muscle = filter_input(INPUT_POST, 'muscle', FILTER_SANITIZE_STRING);
 
+	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+	
+	if ($workout !='3' || $workout !='6' || $workout !='9' || $workout !='12') {
+		$errors['workout'] = true;
+	}
+	
+	if ($muscle !='1' || $muscle !='2' || $muscle !='3' || $muscle !='4' || $muscle != '5') {
+		$errors['muscle'] = true;
+	}
+	
+	if (empty($errors)) {
+		$sql = $db->prepare('
+		SELECT id, exercise, category
+		FROM workout
+		WHERE :category = category
+		LIMIT :amount
+		');
+		$sql->bindValue(':category', $category, PDO::PARAM_INT);
+		$sql->bindValue(':amount', $workout, PDO::PARAM_STR);
+		$sql->execute();
+		//var_dump($sql->errorInfo());
+		header('location:results.php');
+		$results= $sql->fetchALL();
+
+		exit;
+	}
+	
+}
+
+
+	
 ?><!DOCTYPE HTML>
 <html>
 	<head>
@@ -41,30 +57,30 @@
 		</nav>
 	</header>
 		
-		<form method="psot" action="homepage.php" id="home">
+		<form method="post" action="results.php" id="home">
 			<fieldset id="time">
 				<legend>How long do you have to workout?</legend>
-				<input type="radio" id="15" name="workout" value="0">
+				<input type="radio" id="15" name="workout" value="3">
 				<label for="15">15 minutes</label>
-				<input type="radio" id="30" name="workout" value="1">
+				<input type="radio" id="30" name="workout" value="6">
 				<label for="30">30 minutes</label>
-				<input type="radio" id="45" name="workout" value="2">
+				<input type="radio" id="45" name="workout" value="9">
 				<label for="45">45 minutes</label>
-				<input type="radio" id="60" name="workout" value="3">
+				<input type="radio" id="60" name="workout" value="12">
 				<label for="60">60 minutes</label>
 			</fieldset>
 			
 			<fieldset id="muscle-group">
 				<legend>What muscle group would you like to workout?</legend>
-				<input type="radio" id="arms" name="muscle" value="0">
+				<input type="radio" id="arms" name="muscle" value="1">
 				<label for="arms">Arms</label>
-				<input type="radio" id="back" name="muscle" value="1">
+				<input type="radio" id="back" name="muscle" value="2">
 				<label for="back">Back</label>
-				<input type="radio" id="chest" name="muscle" value="2">
+				<input type="radio" id="chest" name="muscle" value="3">
 				<label for="chest">Chest</label>
-				<input type="radio" id="core" name="muscle" value="3">
+				<input type="radio" id="core" name="muscle" value="4">
 				<label for="core">Core</label>
-				<input type="radio" id="legs" name="muscle" value="4">
+				<input type="radio" id="legs" name="muscle" value="5">
 				<label for="legs">Legs</label>
 			</fieldset>
 			
