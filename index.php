@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		if ($user_id) {
 			
 			user_sign_in($user_id);
-			header('location:homepage.html');
+			header('location:homepage.php');
 			exit;
 			//var_dump(header('location:homepage.php'));
 			//redirect back to the page they came from
