@@ -47,6 +47,10 @@
 	</head>
 	
 	<body>
+        <nav id="welcome">	
+            <li>Welcome <?php echo $username; var_dump ($username);?></li>
+            <li><a href="sign-out.php">Logout</a></li>
+    	</nav>
 	<header>
 		<a href="index.php"><h1>Sweaty Betty</h1><img src="images/logo.png" alt="Sweaty Betty Logo"></a>
 		<h2>Because Strong is the New Skinny.</h2>
@@ -57,9 +61,10 @@
 			</ul>
 		</nav>
 	</header>
-		
+	
+    <div class="content">
 		<div id="results">
-
+			<h3>Your Results</h3>
         	<table>
             	<thead>
                 	<th>Exercise</th>
@@ -80,16 +85,10 @@
             </table>
     
         </div>
+     </div>
 		
 		<footer>
 			<p>Before undertaking any exercise program, be sure to consult your physician.</p>
-			<nav id="secondary-nav">
-				<ul>
-					<li><a href="homepage.php">Home</a></li>
-					<li><a href="about-us.html">About Us</a></li>
-					<li><a href="contact-us.html">Contact</a></li>
-				</ul>
-			</nav>
 		</footer>
 	</body>
 </html>

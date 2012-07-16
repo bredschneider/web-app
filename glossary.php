@@ -23,6 +23,10 @@ $results = $sql->fetch();
 	</head>
 	
 	<body>
+         <nav id="welcome">	
+        	<li>Welcome <?php echo $username; var_dump ($username);?></li>
+            <li><a href="sign-out.php">Logout</a></li>
+        </nav>
 	<header>
 		<a href="index.php"><h1>Sweaty Betty</h1><img src="images/logo.png" alt="Sweaty Betty Logo"></a>
 		<h2>Because Strong is the New Skinny.</h2>
@@ -33,26 +37,23 @@ $results = $sql->fetch();
 			</ul>
 		</nav>
 	</header>
-	<div class="glossary">
-		<h2><?php echo $results['exercise']; ?></h2>
-		<h3>Muscle Group:<?php echo $results['category']; ?></h3>
-		<div class="images">
-		</div>
-		<h4>Description</h4>
-		<ol>
-			<li><?php echo $results['description']; ?></li>
-		</ol>
-        <a href="">Return to Workout</a>
-	</div> 
+    
+    <div class="content">
+        <div id="glossary">
+            <h2><?php echo $results['exercise']; ?></h2>
+            <h3>Muscle Group:<?php echo $results['category']; ?></h3>
+            <div class="images">
+            </div>
+            <h4>Description</h4>
+            <ol>
+                <li><?php echo $results['description']; ?></li>
+            </ol>
+            <a href="">Return to Workout</a>
+        </div> 
+    </div>
+    
  		<footer>
 			<p>Before undertaking any exercise program, be sure to consult your physician.</p>
-			<nav id="secondary-nav">
-				<ul>
-					<li><a href="index.php">Home</a></li>
-					<li><a href="">About Us</a></li>
-					<li><a href="">Contact</a></li>
-				</ul>
-			</nav>
 		</footer>
 	</body>
 </html>

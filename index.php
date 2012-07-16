@@ -21,10 +21,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		if ($user_id) {
 			
 			user_sign_in($user_id);
-			header('location:homepage.php');
+			header('Location:' . $_SESSION['referrer']);
 			exit;
-			//var_dump(header('location:homepage.php'));
-			//redirect back to the page they came from
+			var_dump(header($_SESSION['referrer']));
+
 		}else {
 			$errors['no-user'] = true;
 		}
@@ -46,6 +46,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		<a href="index.php"><h1>Sweaty Betty</h1><img src="images/logo.png" alt="Sweaty Betty Logo"></a>
 		<h2>Because Strong is the New Skinny.</h2>
 	</header>
+    
+    <div class="content">
 		<form id="login" method="post" action="index.php">
 			<div>
 				<label for="username">Username</label>
@@ -59,13 +61,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			<p>New to the site? Register <a href="register.php">here</a>.</p>
 			</div>
 		</form>
+     </div>
+     
 		<footer>
 			<p>Before undertaking any exercise program, be sure to consult your physician.</p>
 			<nav id="secondary-nav">
 				<ul>
 					<li><a href="index.php">Home</a></li>
-					<li><a href="">About Us</a></li>
-					<li><a href="">Contact</a></li>
+					<li><a href="about-us.html">About Us</a></li>
+					<li><a href="contact.html">Contact</a></li>
 				</ul>
 			</nav>
 		</footer>

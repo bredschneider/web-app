@@ -1,4 +1,17 @@
-<!DOCTYPE HTML>
+<?php 
+require_once "includes/db.php";
+require_once "includes/users.php";
+
+$username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+
+$_SESSION['referrer'] = $_SERVER['REQUEST_URI'];
+
+if (!user_is_signed_in()) {
+	header ('Location: index.php');
+	exit;
+}
+
+?><!DOCTYPE HTML>
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -9,6 +22,10 @@
 	
 	<body>
 	<header>
+     	<nav id="welcome">	
+        	<li>Welcome <?php echo $username; var_dump ($username);?></li>
+            <li><a href="sign-out.php">Logout</a></li>
+        </nav>
 		<a href="index.php"><h1>Sweaty Betty</h1><img src="images/logo.png" alt="Sweaty Betty Logo"></a>
 		<h2>Because Strong is the New Skinny.</h2>
 		<nav id="primary-nav">
@@ -18,7 +35,7 @@
 			</ul>
 		</nav>
 	</header>
-		
+	<div class="content">	
 		<form method="post" action="results.php" id="home">
 			<fieldset id="time">
 				<legend>How long do you have to workout?</legend>
@@ -48,16 +65,9 @@
 			
 			<button type="submit">Submit</button>
 		</form>
-		
+	</div>	
 		<footer>
 			<p>Before undertaking any exercise program, be sure to consult your physician.</p>
-			<nav id="secondary-nav">
-				<ul>
-					<li><a href="login.php">Home</a></li>
-					<li><a href="about-us.html">About Us</a></li>
-					<li><a href="contact-us.html">Contact</a></li>
-				</ul>
-			</nav>
 		</footer>
 	</body>
 </html>

@@ -58,6 +58,7 @@ if (empty($errors)) {
 		<a href="index.php"><h1>Sweaty Betty</h1><img src="images/logo.png" alt="Sweaty Betty Logo"></a>
 		<h2>Because Strong is the New Skinny.</h2>
 	</header>
+    <div class="content">
 		<form id="register" method="post" action="register.php">
 			<div>
 				<label for="first-name">First Name</label>
@@ -82,6 +83,8 @@ if (empty($errors)) {
 			</div>
 			<button type="submit">Submit</button>
 		</form>
+     </div>
+     
 		<footer>
 			<p>Before undertaking any exercise program, be sure to consult your physician.</p>
 			<nav id="secondary-nav">
