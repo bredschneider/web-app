@@ -14,7 +14,7 @@
 		<nav id="primary-nav">
 			<ul>
 				<li class="current"><a href="homepage.html">My Workouts</a></li>
-				<li><a href="/">Glossary</a></li>
+				<li><a href="homepage.php">Glossary</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -53,7 +53,7 @@
 			<p>Before undertaking any exercise program, be sure to consult your physician.</p>
 			<nav id="secondary-nav">
 				<ul>
-					<li><a href="homepage.php">Home</a></li>
+					<li><a href="login.php">Home</a></li>
 					<li><a href="about-us.html">About Us</a></li>
 					<li><a href="contact-us.html">Contact</a></li>
 				</ul>

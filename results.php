@@ -52,7 +52,7 @@
 		<h2>Because Strong is the New Skinny.</h2>
 		<nav id="primary-nav">
 			<ul>
-				<li class="current"><a href="homepage.html">My Workouts</a></li>
+				<li class="current"><a href="homepage.php">My Workouts</a></li>
 				<li><a href="/">Glossary</a></li>
 			</ul>
 		</nav>
@@ -61,16 +61,21 @@
 		<div id="results">
 
         	<table>
-            	<tr>
-                	<td>Exercise</td>
-                    <td>15 reps</td>
-                    <td>15 reps</td>
-                    <td>15 reps</td>
-                </tr>
+            	<thead>
+                	<th>Exercise</th>
+                    <th>15 reps</th>
+                    <th>15 reps</th>
+                    <th>15 reps</th>
+                </thead>
             	<?php foreach ($results as $workout):?>
+                <tbody>
                 <tr>
-                	<td><?php echo $results['exercise']; ?></td>
+                	<td><a href="glossary.php?id=<?php echo $results['id'] ?>"><?php echo $results['exercise']; ?></a></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
+                </tbody>
                 <?php endforeach; ?>
             </table>
     

@@ -109,6 +109,20 @@ footer {
 	text-decoration: underline;
 }
 
+th {
+	border-bottom: medium solid #842341;
+	border-right: medium solid #842341;
+	margin:0;
+	padding:0;
+}
+
+td {
+	border-bottom: medium solid #842341;
+	border-right: medium solid #842341;
+	margin:0;
+	padding:0;
+}
+
 @media all and (min-width: 90px) {
 
 #login {
