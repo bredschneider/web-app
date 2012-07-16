@@ -1,5 +1,18 @@
 <?php
 	require_once 'includes/db.php';
+	require_once 'includes/users.php';
+	
+$sql=$db->prepare('
+SELECT username
+FROM login
+WHERE id = :id
+');
+
+$sql->bindValue(':id', $_SESSION['user-id'], PDO::PARAM_INT);
+$sql ->execute();
+$user = $sql->fetch();
+
+	
 	
 	$results = array();
 	$errors = array();
@@ -27,7 +40,7 @@
 		$sql->bindValue(':amount', (int) $workout, PDO::PARAM_INT);
 		$sql->execute();
 
-		$results= $sql->fetch();
+		$results= $sql->fetchAll();
 
 	}
 	
@@ -48,7 +61,7 @@
 	
 	<body>
         <nav id="welcome">	
-            <li>Welcome <?php echo $username; var_dump ($username);?></li>
+            <li>Welcome <?php echo $user['username']; ?> |</li>
             <li><a href="sign-out.php">Logout</a></li>
     	</nav>
 	<header>
@@ -72,16 +85,16 @@
                     <th>15 reps</th>
                     <th>15 reps</th>
                 </thead>
-            	<?php foreach ($results as $workout):?>
                 <tbody>
+            	<?php foreach ($results as $exercise):?>
                 <tr>
-                	<td><a href="glossary.php?id=<?php echo $results['id'] ?>"><?php echo $results['exercise']; ?></a></td>
+                	<td><a href="glossary.php?id=<?php echo $exercise['id'] ?>"><?php echo $exercise['exercise']; ?></a></td>
                     <td></td>
                     <td></td>
                     <td></td>
                 </tr>
-                </tbody>
                 <?php endforeach; ?>
+                </tbody>
             </table>
     
         </div>

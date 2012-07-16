@@ -4,11 +4,12 @@
 html {
 	background-color: #52A2D4;
 	font: normal 1.5/100% Arial, Helvetica, sans-serif;
+	text-align: center;
 }
 
 body {
 	margin: 0 auto;
-	position: absolute;
+	position: relative;
 }
 
 header {
@@ -18,12 +19,6 @@ header {
 img {
 	vertical-align: central;
 }
-
-#welcome {
-	background-color: #842341;
-	width: 100%
-}
-
 
 h1 {
 	display: none;
@@ -143,6 +138,18 @@ td {
 	padding: 1em;
 }
 
+#welcome  {
+	background-color: #f90;
+	color: #842341;
+	text-align: right;
+	width: 100%;
+}
+
+#welcome ul li{
+	display: block;
+	padding: 1em;
+}
+
 #primary-nav ul {
 	background-color: #f90;
 	width: 100%;
@@ -173,10 +180,6 @@ td {
 	background-color: #FF0;
 }
 
-.content {
-	width: 100%;
-}
-
 #home {
 	background-color: #FF0;
 	margin: 0;
@@ -193,7 +196,7 @@ legend {
 }
 
 button {
-	margin: 0 0 0 1em;
+	margin: 1em 0 0 1em;
 }
 
 #glossary {
@@ -278,6 +281,13 @@ button {
 }
 
 @media all and (min-width: 1000px) {
+
+#primary-nav,
+.content,
+footer {
+	margin:0 auto;
+	max-width: 1500px;	
+}
 
 }
 

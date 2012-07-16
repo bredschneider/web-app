@@ -21,9 +21,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		if ($user_id) {
 			
 			user_sign_in($user_id);
-			header('Location:' . $_SESSION['referrer']);
-			exit;
-			var_dump(header($_SESSION['referrer']));
+			header('Location: homepage.php');
+		
 
 		}else {
 			$errors['no-user'] = true;

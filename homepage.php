@@ -2,14 +2,18 @@
 require_once "includes/db.php";
 require_once "includes/users.php";
 
-$username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+//$username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
+//var_dump($_SESSION);
 
-$_SESSION['referrer'] = $_SERVER['REQUEST_URI'];
+$sql=$db->prepare('
+SELECT username
+FROM login
+WHERE id = :id
+');
 
-if (!user_is_signed_in()) {
-	header ('Location: index.php');
-	exit;
-}
+$sql->bindValue(':id', $_SESSION['user-id'], PDO::PARAM_INT);
+$sql ->execute();
+$user = $sql->fetch();
 
 ?><!DOCTYPE HTML>
 <html>
@@ -22,16 +26,18 @@ if (!user_is_signed_in()) {
 	
 	<body>
 	<header>
-     	<nav id="welcome">	
-        	<li>Welcome <?php echo $username; var_dump ($username);?></li>
-            <li><a href="sign-out.php">Logout</a></li>
+     	<nav id="welcome">
+        	<ul>	
+                <li>Welcome <?php echo $user['username'];?> | </li>
+                <li><a href="sign-out.php">Logout</a></li>
+            </ul>
         </nav>
 		<a href="index.php"><h1>Sweaty Betty</h1><img src="images/logo.png" alt="Sweaty Betty Logo"></a>
 		<h2>Because Strong is the New Skinny.</h2>
 		<nav id="primary-nav">
 			<ul>
 				<li class="current"><a href="homepage.html">My Workouts</a></li>
-				<li><a href="homepage.php">Glossary</a></li>
+				<li><a href="/">Glossary</a></li>
 			</ul>
 		</nav>
 	</header>

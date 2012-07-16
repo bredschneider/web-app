@@ -1,10 +1,22 @@
 <?php
 require_once 'includes/db.php';
+require_once 'includes/users.php';
+
+$sql=$db->prepare('
+SELECT username
+FROM login
+WHERE id = :id
+');
+
+$sql->bindValue(':id', $_SESSION['user-id'], PDO::PARAM_INT);
+$sql ->execute();
+$user = $sql->fetch();
+
 	
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 	
 $sql=$db->prepare('
-SELECT id, exercise, caetgory, description
+SELECT id, exercise, category, definition
 FROM workout
 WHERE id = :id;
 ');
@@ -12,7 +24,7 @@ WHERE id = :id;
 $sql->bindValue(':id', $id, PDO::PARAM_INT);
 $sql ->execute();
 $results = $sql->fetch();
-	
+
 ?><!DOCTYPE HTML>
 <html>
 	<head>
@@ -24,7 +36,7 @@ $results = $sql->fetch();
 	
 	<body>
          <nav id="welcome">	
-        	<li>Welcome <?php echo $username; var_dump ($username);?></li>
+        	<li>Welcome <?php echo $user['username'];?> |</li>
             <li><a href="sign-out.php">Logout</a></li>
         </nav>
 	<header>
@@ -46,9 +58,9 @@ $results = $sql->fetch();
             </div>
             <h4>Description</h4>
             <ol>
-                <li><?php echo $results['description']; ?></li>
+                <li><?php echo $results['definition']; ?></li>
             </ol>
-            <a href="">Return to Workout</a>
+            <a href="/">Return to Workout</a>
         </div> 
     </div>
     
