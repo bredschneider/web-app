@@ -2,9 +2,6 @@
 require_once "includes/db.php";
 require_once "includes/users.php";
 
-//$username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
-//var_dump($_SESSION);
-
 $sql=$db->prepare('
 SELECT username
 FROM login

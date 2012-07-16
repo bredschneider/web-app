@@ -25,6 +25,9 @@ $sql->bindValue(':id', $id, PDO::PARAM_INT);
 $sql ->execute();
 $results = $sql->fetch();
 
+
+//var_dump($category);
+
 ?><!DOCTYPE HTML>
 <html>
 	<head>
@@ -57,9 +60,7 @@ $results = $sql->fetch();
             <div class="images">
             </div>
             <h4>Description</h4>
-            <ol>
-                <li><?php echo $results['definition']; ?></li>
-            </ol>
+            	<p><?php echo $results['definition']; ?></p>
             <a href="/">Return to Workout</a>
         </div> 
     </div>

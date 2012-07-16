@@ -114,19 +114,25 @@ footer {
 	text-decoration: underline;
 }
 
+
+table {
+	border: 1px solid #666;
+	/* switch from the two borders to just one border*/
+	border-collapse: collapse;
+}
+
+td, 
 th {
-	border-bottom: medium solid #842341;
-	border-right: medium solid #842341;
-	margin:0;
-	padding:0;
+	border: medium solid #842341;
+	padding: 1em;
 }
 
 td {
-	border-bottom: medium solid #842341;
-	border-right: medium solid #842341;
-	margin:0;
-	padding:0;
+	padding: 1em;
+	text-align: right;
+	vertical-align: bottom;
 }
+
 
 @media all and (min-width: 90px) {
 
@@ -141,13 +147,16 @@ td {
 #welcome  {
 	background-color: #f90;
 	color: #842341;
+	padding: 0.5em 0.5em 0.5em 0;
 	text-align: right;
 	width: 100%;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
 }
 
 #welcome ul li{
-	display: block;
-	padding: 1em;
+	display: inline;
 }
 
 #primary-nav ul {
@@ -203,6 +212,7 @@ button {
 	background-color: #FF0;
 	margin: 0;
 	padding: 1em;
+	text-align: left;
 }
 
 #glossary h2 {
@@ -282,6 +292,7 @@ button {
 
 @media all and (min-width: 1000px) {
 
+#welcome,
 #primary-nav,
 .content,
 footer {
