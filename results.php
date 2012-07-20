@@ -52,7 +52,7 @@ $results= $sql->fetchAll();
 		<nav id="primary-nav">
 			<ul>
 				<li class="current"><a href="homepage.php">My Workouts</a></li>
-				<li><a href="/">Glossary</a></li>
+				<li><a href="results.php">Glossary</a></li>
 			</ul>
 		</nav>
 	</header>

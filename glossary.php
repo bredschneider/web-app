@@ -64,9 +64,7 @@ $results = $sql->fetch();
     <div class="content">
         <div id="glossary">
             <h2><?php echo $results['exercise']; ?></h2>
-            <h3>Muscle Group:<?php echo $categories[$results['category']]; ?></h3>
-            <div class="images">
-            </div>
+            <h3>Muscle Group: <?php echo $categories[$results['category']]; ?></h3>
             <h4>Description</h4>
             	<p><?php echo $results['definition']; ?></p>
             <a href="results.php">Return to Workout</a>
