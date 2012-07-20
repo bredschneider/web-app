@@ -1,4 +1,4 @@
-@charset "utf-8";
+sma@charset "utf-8";
 /* CSS Document */
 
 html {
@@ -8,6 +8,7 @@ html {
 }
 
 body {
+	background-color: #52A2D4;
 	margin: 0 auto;
 	position: relative;
 }
@@ -29,6 +30,17 @@ h2 {
 	font-family: 'Happy Monkey', cursive;
 	font-size: 2em;
 	padding: 0 0 1em;
+}
+
+h3 {
+	color: #000;
+	font-family: 'Happy Monkey', cursive;
+	font-size: 1.5em;
+}
+
+h4{
+	color: #000;
+	font-family: 'Happy Monkey', cursive;
 }
 
 nav ul {
@@ -117,7 +129,6 @@ footer {
 
 table {
 	border: 1px solid #666;
-	/* switch from the two borders to just one border*/
 	border-collapse: collapse;
 }
 
@@ -298,6 +309,10 @@ button {
 footer {
 	margin:0 auto;
 	max-width: 1500px;	
+}
+
+table {
+	margin: 0 16.125em;
 }
 
 }
