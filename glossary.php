@@ -7,6 +7,8 @@ $categories = array(
 	, 'Arms'
 	, 'Back'
 	, 'Chest'
+	, 'Core'
+	, 'Legs'
 );
 
 $sql=$db->prepare('
