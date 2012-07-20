@@ -1,7 +1,12 @@
 <?php
 	require_once 'includes/db.php';
 	require_once 'includes/users.php';
-	
+
+if (!isset($_SESSION['workout']) || !isset($_SESSION['muscle'])) {
+	header('Location: homepage.php');
+	exit;
+}
+
 $sql=$db->prepare('
 SELECT username
 FROM login
@@ -11,41 +16,18 @@ WHERE id = :id
 $sql->bindValue(':id', $_SESSION['user-id'], PDO::PARAM_INT);
 $sql ->execute();
 $user = $sql->fetch();
-
 	
-	
-	$results = array();
-	$errors = array();
-	$workout = filter_input(INPUT_POST, 'workout', FILTER_SANITIZE_STRING);
-	$muscle = filter_input(INPUT_POST, 'muscle', FILTER_SANITIZE_STRING);
+$sql = $db->prepare('
+SELECT id, exercise, category
+FROM workout
+WHERE category = :category
+LIMIT :amount
+');
+$sql->bindValue(':category', $_SESSION['muscle'], PDO::PARAM_INT);
+$sql->bindValue(':amount', (int) $_SESSION['workout'], PDO::PARAM_INT);
+$sql->execute();
 
-	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	
-	if (!in_array($workout, array(3,6,9,12))) {
-		$errors['workout'] = true;
-	}
-	
-	if (!in_array($muscle, array(1,2,3,4,5))) {
-		$errors['muscle'] = true;
-	}
-
-	if (empty($errors)) {
-		$sql = $db->prepare('
-		SELECT id, exercise, category
-		FROM workout
-		WHERE category = :category
-		LIMIT :amount
-		');
-		$sql->bindValue(':category', $muscle, PDO::PARAM_INT);
-		$sql->bindValue(':amount', (int) $workout, PDO::PARAM_INT);
-		$sql->execute();
-
-		$results= $sql->fetchAll();
-
-	}
-	
-}
-
+$results= $sql->fetchAll();
 
 	
 ?>

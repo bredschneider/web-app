@@ -12,6 +12,29 @@ $sql->bindValue(':id', $_SESSION['user-id'], PDO::PARAM_INT);
 $sql ->execute();
 $user = $sql->fetch();
 
+$errors = array();
+$workout = filter_input(INPUT_POST, 'workout', FILTER_SANITIZE_STRING);
+$muscle = filter_input(INPUT_POST, 'muscle', FILTER_SANITIZE_STRING);
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+	
+	if (!in_array($workout, array(3,6,9,12))) {
+		$errors['workout'] = true;
+	}
+	
+	if (!in_array($muscle, array(1,2,3,4,5))) {
+		$errors['muscle'] = true;
+	}
+
+	if (empty($errors)) {
+		$_SESSION['workout'] = $workout;
+		$_SESSION['muscle'] = $muscle;
+		header('Location: results.php');
+		exit;
+	}
+	
+}
+
 ?><!DOCTYPE HTML>
 <html>
 	<head>
@@ -39,7 +62,7 @@ $user = $sql->fetch();
 		</nav>
 	</header>
 	<div class="content">	
-		<form method="post" action="results.php" id="home">
+		<form method="post" action="homepage.php" id="home">
 			<fieldset id="time">
 				<legend>How long do you have to workout?</legend>
 				<input type="radio" id="15" name="workout" value="3">

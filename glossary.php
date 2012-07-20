@@ -2,6 +2,13 @@
 require_once 'includes/db.php';
 require_once 'includes/users.php';
 
+$categories = array(
+	''
+	, 'Arms'
+	, 'Back'
+	, 'Chest'
+);
+
 $sql=$db->prepare('
 SELECT username
 FROM login
@@ -11,7 +18,6 @@ WHERE id = :id
 $sql->bindValue(':id', $_SESSION['user-id'], PDO::PARAM_INT);
 $sql ->execute();
 $user = $sql->fetch();
-
 	
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 	
@@ -56,12 +62,12 @@ $results = $sql->fetch();
     <div class="content">
         <div id="glossary">
             <h2><?php echo $results['exercise']; ?></h2>
-            <h3>Muscle Group:<?php echo $results['category']; ?></h3>
+            <h3>Muscle Group:<?php echo $categories[$results['category']]; ?></h3>
             <div class="images">
             </div>
             <h4>Description</h4>
             	<p><?php echo $results['definition']; ?></p>
-            <a href="/">Return to Workout</a>
+            <a href="results.php">Return to Workout</a>
         </div> 
     </div>
     
