@@ -60,6 +60,7 @@ $results= $sql->fetchAll();
     <div class="content">
 		<div id="results">
 			<h3>Your Results</h3>
+            <h4>*All workouts operate on the principle that each set of 15 reps should take one minute to complete. When a set of 15 is completed you can take a one minute rest.</h4>
         	<table>
             	<thead>
                 	<th>Exercise</th>

@@ -247,6 +247,10 @@ button {
 	text-align: center;
 }
 
+#results h4 {
+	font-style: italic;
+}
+
 }
 
 @media all and (min-width: 600px) {
