@@ -310,6 +310,10 @@ button {
 	font-size: 1em;
 }
 
+table {
+	margin: 0 auto;
+}
+
 }
 
 @media all and (min-width: 1000px) {
@@ -323,7 +327,7 @@ footer {
 }
 
 table {
-	margin: 0 16.125em;
+	margin: 0 auto;
 }
 
 }

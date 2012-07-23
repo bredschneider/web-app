@@ -63,18 +63,13 @@ $results= $sql->fetchAll();
             <h4>*All workouts operate on the principle that each set of 15 reps should take one minute to complete. When a set of 15 is completed you can take a one minute rest. Happy Workout!</h4>
         	<table>
             	<thead>
-                	<th>Exercise</th>
-                    <th>15 reps</th>
-                    <th>15 reps</th>
-                    <th>15 reps</th>
+                	<th colspan="2">Your Workout</th>
                 </thead>
                 <tbody>
             	<?php foreach ($results as $exercise):?>
                 <tr>
                 	<td><a href="glossary.php?id=<?php echo $exercise['id'] ?>"><?php echo $exercise['exercise']; ?></a></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>3 sets x 15 reps</td>
                 </tr>
                 <?php endforeach; ?>
                 </tbody>

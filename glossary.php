@@ -11,6 +11,7 @@ $categories = array(
 	, 'Legs'
 );
 
+
 $sql=$db->prepare('
 SELECT username
 FROM login
@@ -24,7 +25,7 @@ $user = $sql->fetch();
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 	
 $sql=$db->prepare('
-SELECT id, exercise, category, definition
+SELECT id, exercise, category, definition, image
 FROM workout
 WHERE id = :id;
 ');
@@ -64,6 +65,7 @@ $results = $sql->fetch();
     <div class="content">
         <div id="glossary">
             <h2><?php echo $results['exercise']; ?></h2>
+            <img src="<?php echo $results['image']; ?>" alt="">
             <h3>Muscle Group: <?php echo $categories[$results['category']]; ?></h3>
             <h4>Description</h4>
             	<p><?php echo $results['definition']; ?></p>
