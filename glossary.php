@@ -52,7 +52,7 @@ $results = $sql->fetch();
             <li><a href="sign-out.php">Logout</a></li>
         </nav>
 	<header>
-		<a href="index.php"><h1>Sweaty Betty</h1><img src="images/logo.png" alt="Sweaty Betty Logo"></a>
+		<a href="index.php"><h1>Sweaty Betty</h1><img src="images/logo-2.png" alt="Sweaty Betty Logo"></a>
 		<h2>Because Strong is the New Skinny.</h2>
 		<nav id="primary-nav">
 			<ul>
