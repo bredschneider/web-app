@@ -1,10 +1,16 @@
 <?php 
-
-//Opena s conntection the MySQL database
-//Shared between all the PHP files in our application
-
-//PDO : PHP Database Object
-//Allows us to connect to many different kinds of databases
+/**
+* Opens a conncection to the MYSQL Database.
+*
+*@author Jessica Bredschneider <jessica.bredschneider@gmail.com>
+*@copyright 2012 Jessica Bredschneider
+*@license BSD-3-Clause <http://github.com/jbred034/web-app/NEW-BSD-LICENSE.txt>
+*@version 1.0.0
+*@package Sweaty Betty
+*
+*
+*
+*/
 
 $user = getenv('DB_USER');
 $pass = getenv('DB_PASS');
