@@ -184,16 +184,17 @@ td {
 #primary-nav ul li{
 	border: thin solid #842341;
 	display:block;
-	padding: 1em;
+	font-size: 1.25em;
+	/*padding: 0em 1em;*/
+	text-transform: uppercase;
 }
 
 #primary-nav ul li a,
 #primary-nav ul li a:link,
 #primary-nav ul li a:visited {
 	color: #000;
-	font-size: 1.25em;
 	text-decoration: none;
-	text-transform: uppercase;
+
 }
 
 #primary-nav ul li a:hover,
@@ -288,7 +289,7 @@ header {
 
 #primary-nav ul .current {
 	margin: 0;
-	padding: 1em;
+	padding: 0.6325em 1em;
 }
 
 #home {

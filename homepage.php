@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		<nav id="primary-nav">
 			<ul>
 				<li class="current"><a href="homepage.html">My Workouts</a></li>
-				<li><a href="/">Glossary</a></li>
+				<li>Glossary</li>
 			</ul>
 		</nav>
 	</header>
