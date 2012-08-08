@@ -15,7 +15,7 @@
 $user = getenv('DB_USER');
 $pass = getenv('DB_PASS');
 $data_source = stripslashes(getenv('DATA_SOURCE'));
-
+var_dump($user, $pass, $data_source);
 $db = new PDO($data_source, $user, $pass);
 var_dump($db);
 exit;
