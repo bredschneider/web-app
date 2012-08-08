@@ -23,7 +23,7 @@ Access to interactive wireframe:(http://invis.io/BT4H4Q2Z)
 Sweaty Betty is licensed under the [new BSD license](NEW-BSD-LICENSE.txt)
 
 ##Link to the App
-http://sweatybetty.phpfogapp.com/
+To view the app live [click here(http://sweatybetty.phpfogapp.com/)]
 
 ##Date Created
 August 17, 2012
