@@ -1,0 +1,64 @@
+ReadMes: targeted at other developers
+- how to use, how to install 
+- versions, dependencies, compatability requirements
+- important features, short description of what the application does
+- about the people who built it (authors, URLS & emails etc.)
+- license, copyright
+- name of the project
+- dates: created and last updated
+- Link to where the app is functional or where you can test it out
+
+Licenses: 
+- GPL; large license, where anyone can change your code but they must submit it through the GPL (large open source license)
+- MIT/BSD; permissive license (short 2 paragraphs long) copyrighter for the code;
+- BSD 3: copyrighter does not have to approve of what individuals do with this code;<---(choose this one)
+- Apache license: does not force you to open source your code;
+http://opensource.org/
+Create file in repository like LICENSE.txt, or NEW-BSD-LICENSE.txt
+- dual license in MT/GPL
+*option to license different parts under closed or open source licenses (i.e. closed source the design but open source the code).
+
+
+Changelog:
+- lists the dates when code is released
+version 1.0.0 (date)
+-initial release
+
+txt or md file
+
+DOCBLOCKS:
+-standardized way to comment your code
+phpdoc.org
+
+Sample DOCBLOCK: putup at the top of every single php file. Need to be inside of the first php block on every page
+1. put license in code;
+/**
+*small description of this file:
+* lists all the dinosaurs in the database
+*
+*tag other pieces of information:
+*@author Jessica Bredschneider <jessica.bredschneider@gmail.com>
+*@copyright 2012 Jessica Bredschneider
+*@license BSD-3-Clause <http://github.com/...license.txt>
+*@version 1.0.0 (new version, something new added, bug fixes)
+*@package Dinosaurs
+*
+*
+*
+*/
+
+Documenting a function:
+/**
+*small description: 
+*creates a new user in the database
+*
+*@param datatype $var_name Description
+*@param PDOConnection $db The open connection to our database 
+*@param string $username The username for the new user
+*@param string $password The users password in clear text
+*
+*@return integer The new user's ID
+*/
+
+If the function does not return anything write VOID
+
