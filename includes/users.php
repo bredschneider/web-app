@@ -80,6 +80,7 @@ function passwords_match ($pass_clear_text, $pass_hashed) {
 *User signs into the application and commences the session
 *
 *@param int $user_id The user's corresponding ID
+*@return VOID
 */
 function user_sign_in ($user_id) {
 	session_regenerate_id();
