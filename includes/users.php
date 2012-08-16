@@ -60,7 +60,6 @@ function user_get ($db, $username, $password) {
 	$sql->bindValue(':username', $username, PDO::PARAM_STR);
 	$sql->execute();
 	$user =$sql->fetch();
-	var_dump($user);
 	if (empty($user) || !passwords_match($password, $user['password'])) {
 		return false;
 	}
